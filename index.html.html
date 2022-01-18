@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        header{
+            background-color: black;
+        }
+        .head{
+            display: flex;
+            width: 100%;
+            background-color: black;
+            position: fixed;
+        }
+        .head1{
+            display: flex;
+            color: lightgray;
+            padding: 10px;
+            padding-left: 50px;
+            width: 75%;
+        }
+        .head1 h1{
+            font-size: 20px;
+            padding-left: 80px;
+        }
+        .head1 img:hover{
+            background-color: lightgray;
+        }
+        .head2{
+            display: flex;
+            color: lightgray;
+            width: 25%;
+        }
+        .head2 h1{
+            font-size: 20px;
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+        .logo{
+            width: 100%;
+            display: flex;
+            background-color: rgb(12, 4, 4);
+            padding-top: 50px;
+        }
+        .logo .logo1{
+            width: 40%;
+        }
+        .nav{
+            width: 60%;
+        }
+        .nav li{
+            display: inline-block;
+            color: lightgray;
+            padding-top: 75px;
+        }
+        .nav li a{
+            text-decoration: none;
+            padding: 25px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .nav a:hover{
+            color: white;
+            text-decoration-line: underline;
+        }
+        .nav .but{
+            font-size: 20px;
+            border: 1px solid black;
+            padding-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #fdb813;
+            color: black;
+        }
+        .but:hover{
+            border: black;
+            background-color: #ffb45d;
+        }
+        #main{
+            background-image: url('D:/Html/taxi/bu.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 700px;
+            cursor: pointer;
+        }
+        .main1{
+            padding-top: 300px;
+            text-align: center;
+            font-size: 15px;
+            color: white;
+            font-weight: bold;
+        }
+        .main1 h2{
+            font-size: 80px;
+        }
+        .main1 .button{
+            border: 3px solid white;
+            background-color: transparent;
+            color: white;
+            padding-top: 10px;
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-bottom: 10px;
+            font-size: 20px;
+            cursor: pointer;
+         }
+         .main1 .button:hover{
+             background-color: hsl(0, 0%, 100%);
+             color: black;
+         }
+         .text{
+             padding-top: 70px;
+             text-align: center;
+         }
+         .text h1{
+             font-size: 60px;
+             font-weight: bold;
+         }
+         .text p{
+             font-size: 20px;
+             color: gray;
+         }
+         .text h2{
+             color: #fdb813;
+             font-size: 20px;
+             font-weight: bold;
+             cursor: pointer;
+         }
+         .text h2:hover{
+             text-decoration-line: underline;
+             color: #ffb45d;
+         }
+        .meta{
+            width: 100%;
+            display: flex;
+            padding-top: 80px;
+            cursor: pointer;
+            background-color: white;
+            padding-bottom: 50px;
+        }
+        .meta1{
+            width: 30%;
+            padding-left: 220px;
+        }
+        .meta1 h1{
+            font-size: 30px;
+            color: black;
+        }
+        .meta1 p{
+            color: gray;
+        }
+        .meta1 h2{
+            color: #ffb45d;
+            font-size: 20px;
+        }
+        .meta1 h2:hover{
+            text-decoration-line: underline;
+            color: #ffb45d;
+        }
+        .meta2{
+            width: 40%;
+            padding-left: 10px;
+        }
+        .meta2 h1{
+            font-size: 30px;
+            color: black;
+        }
+        .meta2 p{
+            color: gray;
+        }
+        .meta2 h2{
+            color: #ffb45d;
+            font-size: 20px;
+        }
+        .meta2 h2:hover{
+            text-decoration-line: underline;
+            color: #ffb45d;
+        }
+        .meta3{
+            width: 30%;
+            padding-right: 170px;
+        }
+        .meta3 h1{
+            font-size: 30px;
+            color: black;
+        }
+        .meta3 p{
+            color: gray;
+        }
+        .meta3 h2{
+            color: #ffb45d;
+            font-size: 20px;
+        }
+        .meta3 h2:hover{
+            text-decoration-line: underline;
+            color: #ffb45d;
+        }
+        #circle{
+            background-image: url('D:/Html/taxi/taxi6.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 600px;
+        }
+        .circle1{
+            color: white;
+            text-align: center;
+            padding-top: 150px;
+            padding-right: 700px;
+            cursor: pointer;
+        }
+        .circle1 p{
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .circle1 h1{
+            font-size: 60px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .circle1 h2{
+            color: #fdb813;
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .circle1 h2:hover{
+            color: #ffb45d;
+            text-decoration-line: underline;
+        }
+        .foot{
+            width: 100%;
+            display: flex;
+            background-color: rgba(8, 8, 8, 1);
+            color: white;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .foot1{
+            width: 40%;
+            padding-left: 120px;
+        }
+        .foot1 p{
+            color: lightgray;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .foot2{
+            width: 20%;
+        }
+        .foot2 h1{
+            font-size: 25px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .foot2 p{
+            color: lightgray;
+            cursor: pointer;
+        }
+        .foot2 p:hover{
+            color: #fdb813;
+
+        }
+        .foot3{
+            width: 40%;
+        }
+        .foot3 h1{
+            font-size: 25px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .foot3 .butt{
+            font-size: 30px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            border: 1px solid black;
+            cursor: pointer;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: #fdb813;
+        }
+        .foot3.butt:hover{
+            background-color: #ffb45d;
+        }
+        .foot3 h2{
+            font-size: 25px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .icon{
+            display: flex;
+            width: 100%;
+            background-color: black;
+            color: white;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .icon1{
+            width: 70%;
+            color: gray;
+            font-size: 8px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding-left: 120px;
+        }
+        .icon2{
+            width: 30%;
+        }
+        .icon2 .img:hover{
+            background-color: lightgray;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="head">
+            <div class="head1">
+                <h1>Follow us:</h1>
+                <img src="D:/Html/taxi/faceboo.png" style="height: 30px; width: 30px; padding-left: 10px;">
+                <img src="D:/Html/taxi/instagram.png" style="height: 30px; width: 30px;">
+                <img src="D:/Html/taxi/youtube.png" style="height: 30px; width: 30px;">
+            </div>
+            <div class="head2">
+                <img src="D:/Html/taxi/callin.png" style="height: 30px; width: 30px; padding-top: 7px;">
+                <h1>call us Today: (987) 654-3210</h1>
+            </div>
+        </div>
+        <div class="logo">
+            <div class="logo1">
+                <img src="D:/Html/taxi/taxi4.jpg" style="height: 90px; width: 140px; padding-left: 130px; padding-top: 30px; padding-bottom: 20px;">
+            </div>
+            <div class="nav">
+                <li><a style="color: #fdb813; text-decoration-line: none;">Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Services</a></li>
+                <li><a>Rates</a></li>
+                <li><a>Contact</a></li>
+                <button class="but">BOOK NOW</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="main">
+        <div class="main1">
+            <h1>- TRANSPO TAXI SERVICES -</h1><br><br>
+            <h2>MAINLAND'S BEST<br>
+                TAXI COMPANY</h2><br><br>
+             <button class="button">BOOK NOW</button>   
+        </div>
+    </section>
+
+    <section>
+            <div class="text">
+                <h1>Transpo Taxi Service</h1><br><br>
+                <p>This is a paragraph. You can write your own content here, and fill in the blanks. What's your story and where<br>
+                    do you go from here? Tell the world about your business, and make this text yours. This is a paragraph. You<br>
+                    can write your own content here, and fill in the blanks. What's your story and where do you go from here? Tell<br>
+                    the world about your business, and make this text yours.
+                </p><br><br><br><br><br>
+                <h2>Learn More</h2>
+            </div>
+    </section>
+    <br><br><br><br>
+    <section>
+        <div class="video" style="background-color: black;">
+            <center>
+            <video width="1050px" controls autoplay>
+                <source src="D:/Html/taxi/car.mp4" type="video/mp4">
+            </video>
+            </center>
+        </div>
+    </section>
+<br>
+    <section>
+        <center>
+        <div class="meta">
+            <div class="meta1">
+                <img src="D:/Html/taxi/car.png" style="height: 80px; width: 80px;"><br><br>
+                <h1>Our Services</h1><br>
+                <p>We offer the full spectrum of services to help<br> organizations work better.
+                     Everything yours...</p><br><br>
+                <h2>Learn More</h2>
+            </div>
+            <div class="meta2">
+                <img src="D:/Html/taxi/rates.png" style="height: 80px; width: 80px;"><br><br>
+                <h1>Our Services</h1><br>
+                <p>We offer the full spectrum of services to help<br> organizations work better.
+                     Everything yours... </p><br><br>
+                <h2>Learn More</h2>
+            </div>
+            <div class="meta3">
+                <img src="D:/Html/taxi/calender1.png" style="height: 80px; width: 80px;"><br><br>
+                <h1>Our Services</h1><br>
+                <p>We offer the full spectrum of services to help<br> organizations work better.
+                     Everything yours... </p><br><br>
+                <h2>Learn More</h2>
+            </div>
+        </div>
+        </center>
+    </section>
+
+    <section id="circle">
+        <div class="circle1">
+            <p>Simple, Quick and Easy Process</p><br><br>
+            <h1>Book Online<br>Ahed Of Time</h1><br>
+            <h2>Get Started</h2>
+        </div>
+    </section>
+
+    <footer>
+        <div class="foot">
+            <div class="foot1">
+            <img src="D:/Html/taxi/taxi4.jpg" style="height: 100px; width: 170px;"><br><br>
+            <p>This is a paragraph. You can write your own content here,<br>
+                and fill in the blanks. What's your story and where do you<br>
+                go from here? Tell the world about your business, and<br>
+                make this text yours.</p>
+        </div>
+        <div class="foot2">
+            <h1>Quick Links</h1><br><br>
+            <p>Home</p><br>
+            <p>Rates</p><br>
+            <p>Services</p><br>
+            <p>Contact</p>
+        </div>
+        <div class="foot3">
+            <h1>Contact Us</h1><br><br>
+            <button class="butt">Book Online Now</button><br><br>
+            <h2>Call Us at (987) 654-3210 today!</h2>
+        </div>
+        </div>
+        <div class="icon">
+            <div class="icon1">
+                <h1>Copyright 2020 Website.com. All Rights Reserved.</h1>
+            </div>
+            <div class="icon2">
+                <img src="D:/Html/taxi/faceboo.png" class="img" style="height: 25px; width: 25px;">
+                <img src="D:/Html/taxi/twitter.png" class="img" style="height: 25px; width: 25px;">
+                <img src="D:/Html/taxi/instagram.png" class="img" style="height: 25px; width: 25px;">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
